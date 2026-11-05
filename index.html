@@ -1,149 +1,296 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneo de fútbol</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- DISEÑO DE LA PAGINA -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #edf4ee;
-            color: #222;
-        }
+<title>Convocatoria de fútbol | UANL</title>
 
-        header {
-            background-color: #176b45;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        nav {
-            background-color: #104d32;
-            padding: 15px;
-            text-align: center;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f4;
+    color: #222;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-        }
+header {
+    background: #006341;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        section {
-            background: white;
-            max-width: 850px;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 12px;
-        }
+header h1 {
+    margin: 0;
+}
 
-        h2 {
-            color: #176b45;
-        }
+nav {
+    background: #004d32;
+    padding: 15px;
+    text-align: center;
+}
 
-        img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
 
-        footer {
-            background: #104d32;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+nav a:hover {
+    text-decoration: underline;
+}
+
+.inicio {
+    background: linear-gradient(#0008, #0008),
+    url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1200");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.inicio h2 {
+    font-size: 42px;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+h2 {
+    color: #006341;
+    text-align: center;
+}
+
+.seccion {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.dato {
+    background: #e5f0e9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.boton {
+    display: inline-block;
+    background: #006341;
+    color: white;
+    padding: 13px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+footer {
+    background: #004d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .datos {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .inicio h2 {
+        font-size: 30px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
-        <h1>⚽ TORNEO DE FÚTBOL</h1>
-        <p>¡Demuestra tu talento en la cancha!</p>
-    </header>
+<header>
+    <h1>Convocatoria de fútbol</h1>
+    <p>Universidad Autónoma de Nuevo León</p>
+</header>
 
-    <!-- MENU -->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#informacion">Información</a>
-        <a href="#reglas">Reglas</a>
-        <a href="#requisitos">Requisitos</a>
-        <a href="#inscripcion">Inscripción</a>
-    </nav>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sede">Sede</a>
+    <a href="#informacion">Información</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#reglamento">Reglamento</a>
+    <a href="#premiacion">Premiación</a>
+    <a href="#inscripcion">Inscripción</a>
+</nav>
 
-    <!-- PRESENTACION -->
-    <section id="inicio">
-        <h2>¡Bienvenidos al torneo!</h2>
+<section class="inicio" id="inicio">
+    <h2>¡Participa en nuestro torneo!</h2>
+    <p>Demuestra tu talento, representa a tu equipo y disfruta del fútbol universitario.</p>
+    <a class="boton" href="#inscripcion">Inscríbete aquí</a>
+</section>
+
+<div class="contenedor">
+
+    <section class="seccion" id="sede">
+        <h2>Sede del torneo</h2>
 
         <p>
-            Invitamos a todos los estudiantes a participar
-            en nuestro torneo de fútbol. Forma tu equipo
-            y demuestra tus habilidades.
+            El torneo se llevará a cabo en el Estadio Gaspar Mass,
+            ubicado en Ciudad Universitaria, San Nicolás de los Garza,
+            Nuevo León.
         </p>
 
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900"
-             alt="Cancha de fútbol">
+        <img
+        src="https://d6isf1yxni2j5.cloudfront.net/large_autenticos_tigres_regresa_a_casa_que_luce_nueva_cara_5ca14328f8.jpg"
+        alt="Estadio Gaspar Mass">
+
+        <p><strong>Ubicación:</strong> Ciudad Universitaria, UANL.</p>
     </section>
 
-    <!-- INFORMACION -->
-    <section id="informacion">
+    <section class="seccion" id="informacion">
         <h2>Información del torneo</h2>
 
-        <p><b>Fecha:</b> 28 de noviembre de 2026</p>
-        <p><b>Lugar:</b> Cancha universitaria</p>
-        <p><b>Horario:</b> 9:00 a. m.</p>
-        <p><b>Inscripción:</b> $500 por equipo</p>
+        <div class="datos">
+            <div class="dato">
+                <h3>Fecha</h3>
+                <p>28 de noviembre de 2026</p>
+            </div>
+
+            <div class="dato">
+                <h3>Horario</h3>
+                <p>9:00 a. m.</p>
+            </div>
+
+            <div class="dato">
+                <h3>Inscripción</h3>
+                <p>$500 por equipo</p>
+            </div>
+
+            <div class="dato">
+                <h3>Fecha límite</h3>
+                <p>24 de noviembre de 2026</p>
+            </div>
+        </div>
     </section>
 
-    <!-- REGLAS -->
-    <section id="reglas">
-        <h2>Reglas generales</h2>
+    <section class="seccion" id="categorias">
+        <h2>Categorías y participantes</h2>
+
+        <img
+        src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1000"
+        alt="Jugadores de fútbol">
+
+        <p>
+            La convocatoria está dirigida a estudiantes de la
+            Universidad Autónoma de Nuevo León.
+        </p>
+
+        <p>
+            Cada equipo deberá registrar a sus integrantes y
+            designar a un capitán.
+        </p>
+    </section>
+
+    <section class="seccion" id="reglamento">
+        <h2>Reglamento</h2>
+
+        <img
+        src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1000"
+        alt="Balón de fútbol">
 
         <ul>
-            <li>Mínimo 7 jugadores por equipo.</li>
-            <li>Dos tiempos de 20 minutos.</li>
-            <li>Portar uniforme deportivo.</li>
-            <li>Respetar al árbitro.</li>
-            <li>Evitar conductas antideportivas.</li>
+            <li>Cada equipo deberá contar con un mínimo de 7 jugadores.</li>
+            <li>Los partidos tendrán dos tiempos de 20 minutos.</li>
+            <li>Todos los participantes deberán portar ropa deportiva.</li>
+            <li>Se deberán respetar las decisiones del árbitro.</li>
+            <li>Las conductas antideportivas podrán ser sancionadas.</li>
+            <li>Los equipos deberán presentarse 15 minutos antes.</li>
         </ul>
     </section>
 
-    <!-- REQUISITOS -->
-    <section id="requisitos">
-        <h2>Requisitos para participar</h2>
+    <section class="seccion">
+        <h2>Requisitos de inscripción</h2>
+
+        <img
+        src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1000"
+        alt="Equipo de fútbol">
 
         <ul>
             <li>Registrar el nombre del equipo.</li>
             <li>Entregar la lista de jugadores.</li>
-            <li>Contar con ropa deportiva.</li>
+            <li>Designar a un capitán.</li>
             <li>Realizar el pago de inscripción.</li>
         </ul>
     </section>
 
-    <!-- INSCRIPCION -->
-    <section id="inscripcion">
+    <section class="seccion" id="premiacion">
+        <h2>Premiación</h2>
+
+        <img
+        src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1000"
+        alt="Premiación deportiva">
+
+        <p>
+            Se entregarán reconocimientos al primer y segundo lugar,
+            además de un premio especial al máximo goleador.
+        </p>
+    </section>
+
+    <section class="seccion" id="inscripcion">
         <h2>¡Inscribe a tu equipo!</h2>
 
-        <p>Fecha límite: 24 de noviembre de 2026.</p>
-        <p>Costo: $500 por equipo.</p>
+        <p><strong>Costo:</strong> $500 por equipo.</p>
+        <p><strong>Fecha límite:</strong> 24 de noviembre de 2026.</p>
 
-        <a href="mailto:torneo@ejemplo.com">
-            Solicitar información
+        <p>
+            Para solicitar información sobre el registro,
+            comunícate con los organizadores.
+        </p>
+
+        <a class="boton"
+        href="mailto:torneo@ejemplo.com?subject=Inscripcion%20al%20torneo">
+            Solicitar inscripción
         </a>
     </section>
 
-    <!-- PIE DE PAGINA -->
-    <footer>
-        <p>© 2026 Torneo de fútbol</p>
-        <p>Convocatoria deportiva universitaria</p>
-    </footer>
+</div>
+
+<footer>
+    <p>Universidad Autónoma de Nuevo León</p>
+    <p>Convocatoria de fútbol | 2026</p>
+</footer>
 
 </body>
 </html>
